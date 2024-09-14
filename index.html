@@ -6,6 +6,13 @@
     <link href="dist/output.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio - Abisam Hazim</title>
+    <script>
+          if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+    </script>
 </head>
 <body class="overflow-x-hidden w-screen min-w-0">
 
@@ -23,25 +30,38 @@
                 </button>
 
                 <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block
-                lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+                lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-dark dark:shadow-slate-600 lg:dark:bg-transparent">
                     <ul class="block lg:flex" id="#nav-active">
                         <li class="group">
-                            <a href="#home" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Beranda</a>
+                            <a href="#home" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Beranda</a>
                         </li>
                         <li class="group">
-                            <a href="#about" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">About Me</a>
+                            <a href="#about" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">About Me</a>
                         </li>
                         <li class="group">
-                            <a href="#portfolio" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Portofolio</a>
+                            <a href="#portfolio" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Portofolio</a>
                         </li>
                         <li class="group">
-                            <a href="#skills" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Skill</a>
+                            <a href="#skills" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Skill</a>
                         </li>
                         <li class="group">
-                            <a href="#certificate" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Certificate</a>
+                            <a href="#certificate" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Certificate</a>
                         </li>
                         <li class="group">
-                            <a href="#contact" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Contact</a>
+                            <a href="#contact" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Contact</a>
+                        </li>
+                        <li class="mt-3 lg:mt-0 flex items-center pl-8">
+                          <div class="flex">
+                            <span class="mr-2 text-sm text-slate-500">light</span>
+                            <input type="checkbox" class="hidden" id="dark-toggle" />
+                            <label for="dark-toggle">
+                              <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+                                <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out">
+                                </div>
+                              </div>
+                            </label>
+                            <span class="ml-2 text-sm text-slate-500">Dark</span>
+                          </div>
                         </li>
                     </ul>
                 </nav>
@@ -51,7 +71,7 @@
 </header>
     
   <!-- Hero Section Start -->
-  <section id="home" class="pt-36 lg:pt-[25px]">
+  <section id="home" class="pt-36 lg:pt-[25px] dark:bg-dark">
     <div class="container">
       <div class="flex flex-wrap">
         <div class="w-full self-center px-4 lg:w-1/2">
@@ -60,10 +80,10 @@
              lg:text-5xl sm:text-lg">
               Im Abisam Hazim</span></h1>
           <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl">Web Developer & 
-            <span class="text-dark">Programming</span></h2>
+            <span class="text-dark dark:text-white">Programming</span></h2>
           <p class="font-medium text-secondary mb-10
           leading-relaxed">I'm a Web Developer, My expertise is to create and Websites design, 
-            graphic design and <span class="text-dark font-bold">many more..</span></p>
+            graphic design and <span class="text-dark font-bold  dark:text-white">many more..</span></p>
 
             <a href="#" class="text-base font-semibold text-white bg-primary 
             py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300
@@ -72,8 +92,8 @@
         <div class="w-full self-end px-4 lg:w-1/2">
           <div class="relative mt-10 lg:mt-9 lg:right-0">
             <img src="dist/img/Foto-diri-removebg.png" width="300" height="300" alt="Abisam Hazim"
-            class="max-w-full mx-auto" />
-            <span class="absolute bottom-0 -z-10 left-1/2 -translate-x-1/2 md:scale-125">
+            class="relative z-10 max-w-full mx-auto" />
+            <span class="absolute bottom-0  left-1/2 -translate-x-1/2 md:scale-125">
               <svg width="800" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                 <path fill="#22d3ee
                 " d="M41.6,-57.5C52,-49.7,57.2,-35,57.3,-21.7C57.4,-8.4,52.3,3.5,51,19.4C49.8,35.4,52.3,55.4,44.4,61.3C36.5,67.2,18.3,59,0.3,58.7C-17.7,58.3,-35.4,65.7,-45.2,60.4C-55,55.1,-56.9,37.1,-56.3,22.2C-55.8,7.4,-52.7,-4.4,-45.8,-11.6C-38.9,-18.8,-28.2,-21.4,-19.9,-29.9C-11.7,-38.4,-5.8,-52.6,4.9,-59.3C15.6,-66.1,31.2,-65.3,41.6,-57.5Z" 
@@ -89,12 +109,12 @@
 
 
   <!-- About Section Start -->
-  <section id="about" class="pt-36 pb-32">
+  <section id="about" class="pt-36 pb-32 dark:bg-dark">
     <div class="container">
       <div class="flex flex-wrap">
         <div class="w-full px-4 mb-10 lg:w-1/2">
           <h4 class="font-bold uppercase text-primary text-lg mb-5 max-w-xl">About Me</h4>
-          <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl">Know more about me!</h2>
+          <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl  dark:text-white">Know more about me!</h2>
           <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">
             Hi, I'm Abisam Hazim, a passionate web developer with a focus on creating dynamic
              and user-friendly websites. Which interest in front-end and back-end development, 
@@ -104,7 +124,7 @@
         </div>
 
         <div class="w-full px-4 lg:w-1/2">
-          <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10">Lets be friend's</h3>
+          <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10  dark:text-white">Lets be friend's</h3>
           <p class="font-medium text-base text-secondary mb-6 lg:text-lg">When I'm not writing code, 
             I enjoy gaming, photograph, designing, reading novels
              which help me stay creative and inspired. I'm always looking to connect with like-minded 
@@ -165,12 +185,12 @@
   <!-- About Section End -->
 
   <!-- Portofolio section start -->
-    <section id="portofolio" class="pt-36 pb-16 bg-slate-100">
+    <section id="portofolio" class="pt-36 pb-16 bg-slate-100 dark:bg-slate-700">
       <div class="container">
         <div class="w-full px-4">
           <div class="max-w-xl mx-auto text-center mb-16">
             <h4 class="font-semibold text-lg text-primary mb-2">Portofolio</h4>
-            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">New Project</h2>
+            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl  dark:text-white">New Project</h2>
             <p class="font-medium text-md text-secondary md:text-lg">The following is my latest project</p>
           </div>
         </div>
@@ -181,7 +201,7 @@
             <div class="rounded-md shadow-md overflow-hidden">
               <img src="dist/img/portofolio/2.jpg" alt="workshop-website"
               width="w-full" />
-              <h3 class="font-semibold text-xl text-dark mt-5 mb-3 ml-2">Workshop Website</h3>
+              <h3 class="font-semibold text-xl text-dark mt-5 mb-3 ml-2  dark:text-white">Workshop Website</h3>
               <p class="font-medium text-base text-secondary ml-2 mb-1">a website that contains information about a workshop, in the form of services, education, and also products sold</p>
             </div>
           </div>
@@ -191,7 +211,7 @@
             <div class="rounded-md shadow-md overflow-hidden">
               <img src="dist/img/portofolio/3.jpg" alt="simple blog website"
               width="w-full" />
-              <h3 class="font-semibold text-xl text-dark mt-5 mb-3 ml-2">Simple blog website</h3>
+              <h3 class="font-semibold text-xl text-dark mt-5 mb-3 ml-2  dark:text-white">Blog Apps</h3>
               <p class="font-medium text-base text-secondary ml-2 mb-1">A website created using Laravel, which contains a collection of blogs and also has search and pagination</p>
             </div>
           </div>
@@ -201,7 +221,7 @@
             <div class="rounded-md shadow-md overflow-hidden">
               <img src="dist/img/portofolio/1.jpg" alt="store-website"
               width="w-full" />
-              <h3 class="font-semibold text-xl text-dark mt-5 mb-3 ml-2">E-Commerce</h3>
+              <h3 class="font-semibold text-xl text-dark mt-5 mb-3 ml-2  dark:text-white">E-Commerce</h3>
               <p class="font-medium text-base text-secondary ml-2 mb-1">website that contains product information in the form of accessories, accessories and phone casings</p>
             </div>
           </div>
@@ -211,7 +231,7 @@
           <div class="rounded-md shadow-md overflow-hidden">
           <img src="dist/img/portofolio/back-end-E-commerce.png" alt="back-end-E-commerce"
           width="w-full" />
-          <h3 class="font-semibold text-xl text-dark mt-5 mb-3 ml-2">E-commerce Admin</h3>
+          <h3 class="font-semibold text-xl text-dark mt-5 mb-3 ml-2  dark:text-white">E-commerce Admin</h3>
           <p class="font-medium text-base text-secondary ml-2 mb-1">A backend containing an e-commerce CRUD operating system that I created with my teams</p>
             </div>
         </div>
@@ -221,7 +241,7 @@
           <div class="rounded-md shadow-md overflow-hidden">
           <img src="dist/img/portofolio/adminDM.jpg" alt="back-end-Workshop"
           width="w-full" />
-          <h3 class="font-semibold text-xl text-dark mt-5 mb-3 ml-2">Workshop Admin</h3>
+          <h3 class="font-semibold text-xl text-dark mt-5 mb-3 ml-2  dark:text-white">Workshop Admin</h3>
           <p class="font-medium text-base text-secondary ml-2 mb-1">A backend containing an Workshop CRUD operating, income data, visitor purchase history</p>
             </div>
         </div>
@@ -233,12 +253,12 @@
   <!-- Portofolio section end -->
 
   <!-- Skills section start -->
- <section id="skills" class="pt-36 pb-32 bg-slate-500">
+  <section id="skills" class="pt-36 pb-32 bg-slate-500 dark:bg-slate-800">
  <div class="container">
     <div class="w-full px-4">
       <div class="mx-auto text-center mb-16">
         <h4 class="font-semibold text-lg text-primary mb-2">Skills</h4>
-        <h2 class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl">My Skills</h2>
+        <h2 class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">My Skills</h2>
         <p class="font-medium text-md text-primary">This is the <span class="text-white font-semibold">programming language</span>,framework, Tools 
           I currently use for frontend, backend and design</p>
       </div>
@@ -334,12 +354,12 @@
   <!-- client section end -->
 
   <!-- certificate section start -->
- <section id="certificate" class="pt-36 pb-32">
+ <section id="certificate" class=" bg-slate-100 dark:bg-dark pt-36 pb-32">
   <div class="container">
     <div class="w-full px-4">
       <div class="max-w-xl mx-auto text-center mb-16">
            <h4 class="font-semibold text-lg text-primary mb-2">Certificate</h4>
-            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">My Certificate</h2>
+            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl  dark:text-white">My Certificate</h2>
             <p class="font-medium text-md text-secondary md:text-lg">These are some of the certificates that I have obtained right now</p>
         </div>
       </div>
@@ -348,7 +368,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-10">
 
             <!-- certificate 1 -->
-            <div class="rounded overflow-hidden shadow-lg">
+            <div class="rounded overflow-hidden shadow-lg dark:bg-slate-700">
             <a href="#"></a>
             <div class="relative">
                 <a href="#">
@@ -370,15 +390,15 @@
             <div class="px-6 py-4">
 
                 <a href="#"
-                    class="font-semibold text-lg inline-block hover:text-primary transition duration-500 ease-in-out">Starting basic 
+                    class="font-semibold text-lg inline-block hover:text-primary transition duration-500 ease-in-out  dark:text-white">Starting basic 
                     programming to become a software developer</a>
                 <p class="text-gray-500 text-sm pt-2">
                   Start knowledge about the world of programming and become a software developer
                 </p>
             </div>
             <div class="px-6 py-4 flex flex-row items-center">
-                <span href="#" class="py-1 text-sm font-regular text-gray-900 mr-1 flex flex-row items-center">
-                    <svg height="13px" width="13px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                <span href="#" class="py-1 text-sm font-regular text-gray-900  dark:text-white mr-1 flex flex-row items-center">
+                    <svg height="13px" width="13px" class="fill-current" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
                         style="enable-background:new 0 0 512 512;" xml:space="preserve">
                         <g>
@@ -389,12 +409,12 @@
                             </g>
                         </g>
                     </svg>
-                    <span class="ml-1">October 22, 2023</span></span>
+                    <span class="ml-1  dark:text-white">October 22, 2023</span></span>
             </div>
         </div>
 
         <!-- certificate 2 -->
-        <div class="rounded overflow-hidden shadow-lg">
+        <div class="rounded overflow-hidden shadow-lg dark:bg-slate-700">
             <a href="#"></a>
             <div class="relative">
                 <a href="#">
@@ -415,14 +435,14 @@
             <div class="px-6 py-4">
 
                 <a href="#"
-                    class="font-semibold text-lg inline-block hover:text-primary transition duration-500 ease-in-out">Learn basic google cloud</a>
+                    class="font-semibold text-lg inline-block hover:text-primary transition duration-500 ease-in-out  dark:text-white">Learn basic google cloud</a>
                 <p class="text-gray-500 text-sm">
                   Get to know what Google Cloud is</p>
             </div>
             <div class="px-6 py-4 flex flex-row items-center">
                 <span href="#"
-                    class="py-1 text-sm font-regular text-gray-900 mr-1 flex flex-row justify-between items-center">
-                    <svg height="13px" width="13px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                    class="py-1 text-sm font-regular text-gray-900  dark:text-white mr-1 flex flex-row justify-between items-center">
+                    <svg height="13px" width="13px" class="fill-current" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
                         style="enable-background:new 0 0 512 512;" xml:space="preserve">
                         <g>
@@ -433,12 +453,12 @@
                             </g>
                         </g>
                     </svg>
-                    <span class="ml-1">September 02, 2023</span></span>
+                    <span class="ml-1  dark:text-white">September 02, 2023</span></span>
             </div>
         </div>
 
         <!-- certificate 3 -->
-        <div class="rounded overflow-hidden shadow-lg">
+        <div class="rounded overflow-hidden shadow-lg dark:bg-slate-700">
 
             <a href="#"></a>
             <div class="relative">
@@ -460,15 +480,15 @@
             <div class="px-6 py-4">
 
                 <a href="#"
-                    class="font-semibold text-lg inline-block hover:text-primary transition duration-500 ease-in-out">Programming Logic (101)</a>
+                    class="font-semibold text-lg inline-block hover:text-primary transition duration-500 ease-in-out  dark:text-white">Programming Logic (101)</a>
                 <p class="text-gray-500 text-sm">
                   Know what programming logic is
                </p>
             </div>
             <div class="px-6 py-4 flex flex-row items-center">
                 <span href="#"
-                    class="py-1 text-sm font-regular text-gray-900 mr-1 flex flex-row justify-between items-center">
-                    <svg height="13px" width="13px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                    class="py-1 text-sm font-regular text-gray-900  dark:text-white mr-1 flex flex-row justify-between items-center">
+                    <svg height="13px" width="13px" class="fill-current" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
                         style="enable-background:new 0 0 512 512;" xml:space="preserve">
                         <g>
@@ -479,12 +499,12 @@
                             </g>
                         </g>
                     </svg>
-                    <span class="ml-1">August 29, 2023</span></span>
+                    <span class="ml-1  dark:text-white">August 29, 2023</span></span>
             </div>
         </div>
 
         <!-- certificate 4 -->
-        <div class="rounded overflow-hidden shadow-lg">
+        <div class="rounded overflow-hidden shadow-lg dark:bg-slate-700">
           <a href="#"></a>
           <div class="relative">
               <a href="#">
@@ -505,15 +525,15 @@
           <div class="px-6 py-4">
 
               <a href="#"
-                  class="font-semibold text-lg inline-block hover:text-primary transition duration-500 ease-in-out">Digital literacy seminar</a>
+                  class="font-semibold text-lg inline-block hover:text-primary transition duration-500 ease-in-out  dark:text-white">Digital literacy seminar</a>
               <p class="text-gray-500 text-sm pt-2">
                 with the theme digital literacy, being smart in the digital era,
                 organized by the directorate of informatics empowerment, Kominfo</p>
           </div>
           <div class="px-6 py-4 flex flex-row items-center">
               <span href="#"
-                  class="py-1 text-sm font-regular text-gray-900 mr-1 flex flex-row justify-between items-center">
-                  <svg height="13px" width="13px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                  class="py-1 text-sm font-regular text-gray-900  dark:text-white mr-1 flex flex-row justify-between items-center">
+                  <svg height="13px" width="13px" class="fill-current" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
                       style="enable-background:new 0 0 512 512;" xml:space="preserve">
                       <g>
@@ -524,12 +544,12 @@
                           </g>
                       </g>
                   </svg>
-                  <span class="ml-1">February 20, 2023</span></span>
+                  <span class="ml-1  dark:text-white">February 20, 2023</span></span>
           </div>
       </div>
 
       <!-- certificate 5 -->
-      <div class="rounded overflow-hidden shadow-lg">
+      <div class="rounded overflow-hidden shadow-lg dark:bg-slate-700">
         <a href="#"></a>
         <div class="relative">
             <a href="#">
@@ -551,15 +571,15 @@
         <div class="px-6 py-4">
 
             <a href="#"
-                class="font-semibold text-lg inline-block hover:text-primary transition duration-500 ease-in-out">DevCoach: Flutter</a>
+                class="font-semibold text-lg inline-block hover:text-primary transition duration-500 ease-in-out  dark:text-white">DevCoach: Flutter</a>
             <p class="text-gray-500 text-sm">
             Future navigation with GoRouter
             </p>
         </div>
         <div class="px-6 py-4 flex flex-row items-center">
             <span href="#"
-                class="py-1 text-sm font-regular text-gray-900 mr-1 flex flex-row justify-between items-center">
-                <svg height="13px" width="13px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                class="py-1 text-sm font-regular text-gray-900  dark:text-white mr-1 flex flex-row justify-between items-center">
+                <svg height="13px" width="13px" class="fill-current" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
                     style="enable-background:new 0 0 512 512;" xml:space="preserve">
                     <g>
@@ -570,12 +590,12 @@
                         </g>
                     </g>
                 </svg>
-                <span class="ml-1">August 30, 2024</span></span>
+                <span class="ml-1  dark:text-white">August 30, 2024</span></span>
         </div>
     </div>
 
     <!-- certificate 6 -->
-    <div class="rounded overflow-hidden shadow-lg">
+    <div class="rounded overflow-hidden shadow-lg dark:bg-slate-700">
       <a href="#"></a>
       <div class="relative">
           <a href="#">
@@ -597,15 +617,15 @@
       <div class="px-6 py-4">
 
           <a href="#"
-              class="font-semibold text-lg inline-block hover:text-primary transition duration-500 ease-in-out">Mastering SOLID Principles to Boost Engineering career</a>
+              class="font-semibold text-lg inline-block hover:text-primary transition duration-500 ease-in-out  dark:text-white">Mastering SOLID Principles to Boost Engineering career</a>
           <p class="text-gray-500 text-sm">
             Organized by Indosat Ooredo Hutchison Digital Camp
           </p>
       </div>
       <div class="px-6 py-4 flex flex-row items-center">
           <span href="#"
-              class="py-1 text-sm font-regular text-gray-900 mr-1 flex flex-row justify-between items-center">
-              <svg height="13px" width="13px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              class="py-1 text-sm font-regular text-gray-900  dark:text-white mr-1 flex flex-row justify-between items-center">
+              <svg height="13px" width="13px" class="fill-current" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
                   style="enable-background:new 0 0 512 512;" xml:space="preserve">
                   <g>
@@ -616,7 +636,7 @@
                       </g>
                   </g>
               </svg>
-              <span class="ml-1">February 20, 2023</span></span>
+              <span class="ml-1 dark:text-white">February 20, 2023</span></span>
       </div>
   </div>
 
@@ -626,12 +646,12 @@
   <!-- certificate section end -->
 
   <!-- Contact section start -->
-   <section id="contact" class="pt-36 pb-32">
+   <section id="contact" class="pt-36 pb-32 dark:bg-slate-800">
     <div class="container">
       <div class="w-full px-4">
         <div class="max-w-xl mx-auto text-center mb-16">
           <h4 class="font-semibold text-lg text-primary mb-2">Contact</h4>
-           <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">Contact Me</h2>
+           <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Contact Me</h2>
            <p class="font-medium text-md text-secondary md:text-lg">Please, feel free to contact me</p>
        </div>
       </div>
@@ -792,6 +812,13 @@
     </div>
    </footer>
   <!-- footer end -->
+
+  <!-- back to top start -->
+   <a href="#home" id="to-top" class="hidden fixed  justify-center items-center z-[9999] bottom-4 right-4 p-4 h-14 w-14 bg-primary rounded-full
+   hover:animate-pulse">
+     <span class="block h-5 w-5 border-t-2 border-l-2 rotate-45 mt-2"></span>
+   </a>
+  <!-- back to top end -->
 
   <script src="dist/js/script.js"></script>
 </body>
