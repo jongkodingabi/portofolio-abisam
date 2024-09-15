@@ -743,6 +743,10 @@ video {
   margin-top: 1.25rem;
 }
 
+.box-border {
+  box-sizing: border-box;
+}
+
 .block {
   display: block;
 }
@@ -1080,6 +1084,16 @@ video {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .pb-12 {
@@ -1545,12 +1559,21 @@ body {
     width: 66.666667%;
   }
 
+  .lg\:max-w-full {
+    max-width: 100%;
+  }
+
   .lg\:rounded-none {
     border-radius: 0px;
   }
 
   .lg\:bg-transparent {
     background-color: transparent;
+  }
+
+  .lg\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .lg\:pt-10 {
