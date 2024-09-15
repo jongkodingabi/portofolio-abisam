@@ -1483,6 +1483,10 @@ body {
     padding: 4rem;
   }
 
+  .md\:p-8 {
+    padding: 2rem;
+  }
+
   .md\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -1547,6 +1551,10 @@ body {
 
   .lg\:bg-transparent {
     background-color: transparent;
+  }
+
+  .lg\:p-12 {
+    padding: 3rem;
   }
 
   .lg\:pt-10 {
