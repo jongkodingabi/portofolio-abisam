@@ -1445,6 +1445,10 @@ body {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .sm\:overflow-x-hidden {
+    overflow-x: hidden;
+  }
+
   .sm\:p-10 {
     padding: 2.5rem;
   }
