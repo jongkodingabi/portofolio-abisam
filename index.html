@@ -191,9 +191,10 @@
           </div>
         </div>
 
-        <!-- 1 -->
+
         <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
           <div class="mb-12 p-4 md:w-1/2">
+        <!-- 1 -->
             <div class="rounded-md shadow-md overflow-hidden">
               <img src="dist/img/portofolio/2.jpg" alt="workshop-website"
               width="w-full" />
@@ -330,8 +331,9 @@
 
         <!-- CSS -->
         <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition 
-        hover:grayscale-0 duration-500 hover:opacity-100 lg:mx-6 xl:mx-8">
-       <img src="dist/img/clients/css.png" alt="">
+        hover:grayscale-0 duration-500 hover:opacity-100 lg:mx-6 xl:mx-8 text-blue-500">
+        <svg role="img" width="100" height="100" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <title>CSS3</title><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"/></svg>        
         </a>
 
         <!-- figma -->
@@ -346,7 +348,7 @@
 </div>
  </div>
  </section>
-  <!-- client section end -->
+  <!-- Skills section end -->
 
   <!-- certificate section start -->
 <section id="certificate" class="bg-slate-100 dark:bg-dark pt-36 pb-32 overflow-x-hidden">
@@ -359,7 +361,7 @@
         </div>
       </div>
 
-      <div class="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16"></div>
+      <div class="max-w-screen-xl flex flex-wrap justify-center xl:w-10/12 xl:mx-auto"></div>
         <div class="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-10">
 
             <!-- certificate 1 -->
@@ -745,34 +747,38 @@
        </div>
       </div>
 
-      <form>
+      <form action="https://formspree.io/f/mgvwjyko" method="POST">
         <div class="w-full lg:w-2/3 lg:mx-auto">
-      <div class="w-full px-4 mb-8">
-        <label for="name" class="text-base font-bold text-primary">Name</label>
-        <input type="text" id="name" class="w-full bg-slate-200 text-dark p-3 rounded-md
-        focus:outline-none focus:ring-primary focus:border-primary" />
-      </div>
-
-      <div class="w-full px-4 mb-8">
-        <label for="email" class="text-base font-bold text-primary">Email</label>
-        <input type="email" id="email" class="w-full bg-slate-200 text-dark p-3 rounded-md
-        focus:outline-none focus:ring-primary focus:border-primary" />
-      </div>
-
-      <div class="w-full px-4 mb-8">
-        <label for="message" class="text-base font-bold text-primary">Messages</label>
-        <textarea type="text" id="name" class="w-full bg-slate-200 text-dark p-3 rounded-md
-        focus:outline-none focus:ring-primary focus:border-primary h-32"></textarea>
-      </div>
-      <div class="w-full px-4">
-        <button class="text-base font-semibold text-white bg-primary
-        py-3 px-8 rounded-full w-full hover:opacity-80 hover:shodow-lg
-        transition duration-500">Submit</button>
-      </div>
-    </div>
-    </form>
-      </div>
-    </div>
+          <div class="w-full px-4 mb-8">
+            <label for="name" class="text-base font-bold text-primary">Name</label>
+            <input type="text" id="name" name="name" class="w-full bg-slate-200 text-dark p-3 rounded-md
+            focus:outline-none focus:ring-primary focus:border-primary" required/>
+          </div>
+      
+          <div class="w-full px-4 mb-8">
+            <label for="email" class="text-base font-bold text-primary">Email</label>
+            <input type="email" id="email" name="email" class="w-full bg-slate-200 text-dark p-3 rounded-md
+            focus:outline-none focus:ring-primary focus:border-primary" required/>
+          </div>
+      
+          <div class="w-full px-4 mb-8">
+            <label for="message" class="text-base font-bold text-primary">Messages</label>
+            <textarea id="message" name="message" class="w-full bg-slate-200 text-dark p-3 rounded-md
+            focus:outline-none focus:ring-primary focus:border-primary h-32" required></textarea>
+          </div>
+      
+          <!-- Bot prevention -->
+          <input type="hidden" name="_honeypot" style="display:none">
+          <input type="hidden" name="_captcha" value="false">
+      
+          <div class="w-full px-4">
+            <button type="submit" class="text-base font-semibold text-white bg-primary
+            py-3 px-8 rounded-full w-full hover:opacity-80 hover:shadow-lg
+            transition duration-500">Submit</button>
+          </div>
+        </div>
+      </form>
+      
 
    </section>
   <!-- Contact section  end-->
