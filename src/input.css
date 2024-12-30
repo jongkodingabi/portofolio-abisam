@@ -26,25 +26,3 @@ body {
 .hamburger-active > span:nth-child(3) {
   @apply -rotate-45;
 }
-
-/* Tailwind utilitas untuk animasi */
-#dark-toggle:checked + label .toggle-circle {
-  @apply transform translate-x-6 bg-blue-600; /* Menggeser toggle ke kanan dan berubah menjadi biru */
-}
-
-/* Menyembunyikan ikon dan hanya menampilkan satu ikon tergantung kondisi toggle */
-#dark-toggle:checked ~ #toggle-icons i:nth-child(1) {
-  @apply hidden;
-}
-
-#dark-toggle:not(:checked) ~ #toggle-icons i:nth-child(2) {
-  @apply hidden;
-}
-
-#dark-toggle:not(:checked) ~ #toggle-icons i:nth-child(1) {
-  @apply block;
-}
-
-#dark-toggle:checked ~ #toggle-icons i:nth-child(2) {
-  @apply block;
-}
