@@ -1,12 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [  "./index.html", 
-    "./src/**/*.{js,css}"],
-  darkMode: 'class',
+  content: ["./index.html", "./src/**/*.{js,css}"],
+  darkMode: "class",
   theme: {
     container: {
       center: true,
-      padding: '16px'
+      padding: "16px",
     },
     extend: {
       colors: {
@@ -16,9 +15,9 @@ module.exports = {
         youngGreen: "#34d399",
       },
       screens: {
-        '2xl': '1320px',
-      }
+        "2xl": "1320px",
+      },
     },
   },
-  plugins: [],
-}
+  plugins: [require("@tailwindcss/forms")],
+};

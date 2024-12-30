@@ -3,30 +3,48 @@
 @tailwind utilities;
 
 body {
-    font-family: 'inter', sans-serif;
+  font-family: "inter", sans-serif;
 }
 
 .navbar-fixed {
-    @apply fixed z-[9999] bg-white bg-opacity-40 backdrop-blur-sm dark:bg-dark dark:bg-opacity-50;
-    box-shadow: inset 0 -1px 00 rgba(0, 0, 0, 0.2)
+  @apply fixed z-[9999] bg-white bg-opacity-40 backdrop-blur-sm dark:bg-dark dark:bg-opacity-50;
+  box-shadow: inset 0 -1px 00 rgba(0, 0, 0, 0.2);
 }
 
-.hamburger-line{
-    @apply w-[30px] h-[2px] my-2 block bg-dark dark:bg-white;
+.hamburger-line {
+  @apply w-[30px] h-[2px] my-2 block bg-dark dark:bg-white;
 }
 
 .hamburger-active > span:nth-child(1) {
-    @apply rotate-45;
+  @apply rotate-45;
 }
 
 .hamburger-active > span:nth-child(2) {
-    @apply scale-0;
+  @apply scale-0;
 }
 
 .hamburger-active > span:nth-child(3) {
-    @apply -rotate-45;
+  @apply -rotate-45;
 }
 
-#dark-toggle:checked ~ label div.toggle-circle {
-    @apply translate-x-3;
+/* Tailwind utilitas untuk animasi */
+#dark-toggle:checked + label .toggle-circle {
+  @apply transform translate-x-6 bg-blue-600; /* Menggeser toggle ke kanan dan berubah menjadi biru */
+}
+
+/* Menyembunyikan ikon dan hanya menampilkan satu ikon tergantung kondisi toggle */
+#dark-toggle:checked ~ #toggle-icons i:nth-child(1) {
+  @apply hidden;
+}
+
+#dark-toggle:not(:checked) ~ #toggle-icons i:nth-child(2) {
+  @apply hidden;
+}
+
+#dark-toggle:not(:checked) ~ #toggle-icons i:nth-child(1) {
+  @apply block;
+}
+
+#dark-toggle:checked ~ #toggle-icons i:nth-child(2) {
+  @apply block;
 }
