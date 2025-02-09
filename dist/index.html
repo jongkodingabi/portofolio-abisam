@@ -17,6 +17,49 @@
     </script>
     <link href="./assets/index-CRoTQYe1.css" rel="stylesheet">
     <link href="./output.css" rel="stylesheet">
+  <style>
+    @keyframes scroll {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
+    }
+
+    .scroll-container {
+        width: 100vw; 
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .scroll-wrapper {
+        display: flex;
+        width: 200vw;
+    }
+
+    .scroll-content {
+        display: flex;
+        min-width: 100vw;
+        justify-content: space-around;
+        animation: scroll 20s linear infinite;
+    }
+
+    .skill-logo {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        filter: drop-shadow(2px 2px 4px rgba(255, 255, 255, 0.2));
+    }
+    .skill-logo:hover {
+        filter: drop-shadow(4px 4px 4px #34d399);
+    }
+
+
+</style>
 </head>
 
 <body class="mx-auto overflow-x-hidden sm:overflow-x-hidden max-w-screen">
@@ -219,6 +262,80 @@
 
 </div>
 </div>
+
+<!-- Infinite Looping skills icon 1 -->
+ <div class="dark:bg-dark text-zinc-950 flex justify-center items-center mt-10">
+  <!-- Fade Effect Left -->
+    <div class="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-gray-900 to-transparent z-10"></div>
+
+    <div class="w-full overflow-hidden relative">
+        <div class="scroll-container">
+            <div class="scroll-wrapper">
+                <div class="scroll-content">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="skill-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="skill-logo">
+                    <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'%20standalone='no'%20?%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Generator:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='800px'%20height='800px'%20viewBox='0%200%20256%20256'%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20preserveAspectRatio='xMidYMid'%3e%3cg%3e%3cpath%20d='M0,222.991225%20C0,241.223474%2014.7785318,256%2033.0087747,256%20L222.991225,256%20C241.223474,256%20256,241.221468%20256,222.991225%20L256,33.0087747%20C256,14.7765263%20241.221468,0%20222.991225,0%20L33.0087747,0%20C14.7765263,0%200,14.7785318%200,33.0087747%20L0,222.991225%20Z'%20fill='%23563D7C'%3e%3c/path%3e%3cpath%20d='M106.157563,113.238095%20L106.157563,76.9845938%20L138.069328,76.9845938%20C141.108559,76.9845938%20144.039202,77.2378593%20146.861345,77.7443978%20C149.683488,78.2509362%20152.179961,79.1554557%20154.35084,80.4579832%20C156.52172,81.7605107%20158.258397,83.5695496%20159.560924,85.8851541%20C160.863452,88.2007585%20161.514706,91.1675823%20161.514706,94.7857143%20C161.514706,101.298352%20159.560944,106.001853%20155.653361,108.896359%20C151.745779,111.790864%20146.752832,113.238095%20140.67437,113.238095%20L106.157563,113.238095%20L106.157563,113.238095%20Z%20M72.07493,50.5%20L72.07493,205.5%20L147.186975,205.5%20C154.133788,205.5%20160.899594,204.631661%20167.484594,202.894958%20C174.069594,201.158255%20179.93088,198.480877%20185.068627,194.862745%20C190.206375,191.244613%20194.294803,186.577293%20197.334034,180.860644%20C200.373264,175.143996%20201.892857,168.37819%20201.892857,160.563025%20C201.892857,150.866431%20199.541107,142.581033%20194.837535,135.706583%20C190.133963,128.832132%20183.00635,124.020088%20173.454482,121.270308%20C180.401295,117.941627%20185.647508,113.672295%20189.193277,108.462185%20C192.739047,103.252075%20194.511905,96.7395349%20194.511905,88.9243697%20C194.511905,81.6881057%20193.317939,75.6097352%20190.929972,70.6890756%20C188.542005,65.7684161%20185.177193,61.8247114%20180.835434,58.8578431%20C176.493676,55.8909749%20171.283644,53.756309%20165.205182,52.4537815%20C159.12672,51.151254%20152.397096,50.5%20145.016106,50.5%20L72.07493,50.5%20L72.07493,50.5%20Z%20M106.157563,179.015406%20L106.157563,136.466387%20L143.279412,136.466387%20C150.660401,136.466387%20156.594049,138.166883%20161.080532,141.567927%20C165.567016,144.968971%20167.810224,150.649353%20167.810224,158.609244%20C167.810224,162.661552%20167.122789,165.990183%20165.747899,168.595238%20C164.373009,171.200293%20162.527789,173.262597%20160.212185,174.782213%20C157.89658,176.301828%20155.219203,177.387252%20152.179972,178.038515%20C149.140741,178.689779%20145.956833,179.015406%20142.628151,179.015406%20L106.157563,179.015406%20L106.157563,179.015406%20Z'%20fill='%23FFFFFF'%3e%3c/path%3e%3c/g%3e%3c/svg%3e" alt="CSS3" class="skill-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" class="skill-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="skill-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js" class="skill-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="skill-logo">
+                    <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Generator:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='800px'%20height='800px'%20viewBox='0%200%2064%2064'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M47.982%2023.453c.012.044.018.089.018.134v7.071a.516.516%200%200%201-.26.448l-5.934%203.417v6.772a.517.517%200%200%201-.258.447L29.16%2048.874c-.029.016-.06.026-.09.037-.012.004-.023.011-.035.015a.519.519%200%200%201-.264%200c-.015-.004-.027-.012-.041-.017-.028-.01-.058-.02-.085-.035l-12.386-7.132a.517.517%200%200%201-.259-.447V20.082c0-.046.006-.091.018-.135.004-.015.013-.028.018-.043.01-.027.019-.055.033-.08.01-.017.024-.03.035-.046.015-.02.029-.042.046-.06.015-.015.034-.026.051-.039.019-.015.035-.032.057-.044l6.194-3.566a.517.517%200%200%201%20.515%200l6.194%203.566c.021.013.039.029.057.044.017.013.036.024.05.038.019.02.032.04.047.061.011.016.026.029.035.046.015.025.023.053.034.08.005.015.014.028.017.044a.52.52%200%200%201%20.019.134v13.25l5.16-2.972v-6.773a.52.52%200%200%201%20.019-.134c.004-.016.012-.03.018-.044.01-.027.019-.055.033-.08.01-.017.024-.03.035-.046.015-.02.028-.042.046-.06.015-.015.034-.025.05-.038.02-.016.037-.033.057-.045l6.195-3.566a.516.516%200%200%201%20.515%200l6.194%203.566c.022.013.038.03.058.044.016.013.034.024.05.039.017.018.03.04.046.06.011.016.025.03.034.046.015.025.024.053.034.08.006.015.014.028.018.044zm-1.014%206.907v-5.88L44.8%2025.728l-2.994%201.724v5.88l5.162-2.972zm-6.194%2010.637v-5.884l-2.945%201.682-8.41%204.8v5.94l11.355-6.538zM17.032%2020.975v20.022l11.355%206.537v-5.938l-5.932-3.357-.002-.002-.003-.001c-.02-.012-.036-.028-.055-.043-.016-.012-.035-.023-.049-.037l-.001-.002c-.017-.016-.029-.036-.043-.054-.013-.017-.028-.032-.038-.05l-.001-.002c-.012-.02-.019-.043-.027-.065-.009-.019-.02-.037-.025-.058-.006-.025-.007-.05-.01-.076-.003-.02-.008-.038-.008-.058V23.946L19.2%2022.222l-2.168-1.247zm5.678-3.863-5.16%202.97%205.159%202.97%205.16-2.97-5.16-2.97h.001zm2.684%2018.537%202.993-1.723V20.975l-2.167%201.247-2.994%201.724v12.951l2.168-1.248zM41.29%2020.617l-5.16%202.97%205.16%202.97%205.158-2.97-5.158-2.97zm-.517%206.835-2.994-1.724-2.167-1.248v5.88l2.993%201.723%202.168%201.249v-5.88zm-11.872%2013.25%207.568-4.32%203.783-2.16-5.156-2.968-5.936%203.418-5.41%203.115%205.151%202.915z'%20fill='%23FF2D20'/%3e%3c/svg%3e" alt="Laravel" class="skill-logo">
+                </div>
+                <div class="scroll-content">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="skill-logo">
+                    <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'%20standalone='no'%20?%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Generator:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='800px'%20height='800px'%20viewBox='0%200%20256%20256'%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20preserveAspectRatio='xMidYMid'%3e%3cg%3e%3cpath%20d='M0,222.991225%20C0,241.223474%2014.7785318,256%2033.0087747,256%20L222.991225,256%20C241.223474,256%20256,241.221468%20256,222.991225%20L256,33.0087747%20C256,14.7765263%20241.221468,0%20222.991225,0%20L33.0087747,0%20C14.7765263,0%200,14.7785318%200,33.0087747%20L0,222.991225%20Z'%20fill='%23563D7C'%3e%3c/path%3e%3cpath%20d='M106.157563,113.238095%20L106.157563,76.9845938%20L138.069328,76.9845938%20C141.108559,76.9845938%20144.039202,77.2378593%20146.861345,77.7443978%20C149.683488,78.2509362%20152.179961,79.1554557%20154.35084,80.4579832%20C156.52172,81.7605107%20158.258397,83.5695496%20159.560924,85.8851541%20C160.863452,88.2007585%20161.514706,91.1675823%20161.514706,94.7857143%20C161.514706,101.298352%20159.560944,106.001853%20155.653361,108.896359%20C151.745779,111.790864%20146.752832,113.238095%20140.67437,113.238095%20L106.157563,113.238095%20L106.157563,113.238095%20Z%20M72.07493,50.5%20L72.07493,205.5%20L147.186975,205.5%20C154.133788,205.5%20160.899594,204.631661%20167.484594,202.894958%20C174.069594,201.158255%20179.93088,198.480877%20185.068627,194.862745%20C190.206375,191.244613%20194.294803,186.577293%20197.334034,180.860644%20C200.373264,175.143996%20201.892857,168.37819%20201.892857,160.563025%20C201.892857,150.866431%20199.541107,142.581033%20194.837535,135.706583%20C190.133963,128.832132%20183.00635,124.020088%20173.454482,121.270308%20C180.401295,117.941627%20185.647508,113.672295%20189.193277,108.462185%20C192.739047,103.252075%20194.511905,96.7395349%20194.511905,88.9243697%20C194.511905,81.6881057%20193.317939,75.6097352%20190.929972,70.6890756%20C188.542005,65.7684161%20185.177193,61.8247114%20180.835434,58.8578431%20C176.493676,55.8909749%20171.283644,53.756309%20165.205182,52.4537815%20C159.12672,51.151254%20152.397096,50.5%20145.016106,50.5%20L72.07493,50.5%20L72.07493,50.5%20Z%20M106.157563,179.015406%20L106.157563,136.466387%20L143.279412,136.466387%20C150.660401,136.466387%20156.594049,138.166883%20161.080532,141.567927%20C165.567016,144.968971%20167.810224,150.649353%20167.810224,158.609244%20C167.810224,162.661552%20167.122789,165.990183%20165.747899,168.595238%20C164.373009,171.200293%20162.527789,173.262597%20160.212185,174.782213%20C157.89658,176.301828%20155.219203,177.387252%20152.179972,178.038515%20C149.140741,178.689779%20145.956833,179.015406%20142.628151,179.015406%20L106.157563,179.015406%20L106.157563,179.015406%20Z'%20fill='%23FFFFFF'%3e%3c/path%3e%3c/g%3e%3c/svg%3e" alt="CSS3" class="skill-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="skill-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" class="skill-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="skill-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js" class="skill-logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="skill-logo">
+                    <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Generator:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='800px'%20height='800px'%20viewBox='0%200%2064%2064'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M47.982%2023.453c.012.044.018.089.018.134v7.071a.516.516%200%200%201-.26.448l-5.934%203.417v6.772a.517.517%200%200%201-.258.447L29.16%2048.874c-.029.016-.06.026-.09.037-.012.004-.023.011-.035.015a.519.519%200%200%201-.264%200c-.015-.004-.027-.012-.041-.017-.028-.01-.058-.02-.085-.035l-12.386-7.132a.517.517%200%200%201-.259-.447V20.082c0-.046.006-.091.018-.135.004-.015.013-.028.018-.043.01-.027.019-.055.033-.08.01-.017.024-.03.035-.046.015-.02.029-.042.046-.06.015-.015.034-.026.051-.039.019-.015.035-.032.057-.044l6.194-3.566a.517.517%200%200%201%20.515%200l6.194%203.566c.021.013.039.029.057.044.017.013.036.024.05.038.019.02.032.04.047.061.011.016.026.029.035.046.015.025.023.053.034.08.005.015.014.028.017.044a.52.52%200%200%201%20.019.134v13.25l5.16-2.972v-6.773a.52.52%200%200%201%20.019-.134c.004-.016.012-.03.018-.044.01-.027.019-.055.033-.08.01-.017.024-.03.035-.046.015-.02.028-.042.046-.06.015-.015.034-.025.05-.038.02-.016.037-.033.057-.045l6.195-3.566a.516.516%200%200%201%20.515%200l6.194%203.566c.022.013.038.03.058.044.016.013.034.024.05.039.017.018.03.04.046.06.011.016.025.03.034.046.015.025.024.053.034.08.006.015.014.028.018.044zm-1.014%206.907v-5.88L44.8%2025.728l-2.994%201.724v5.88l5.162-2.972zm-6.194%2010.637v-5.884l-2.945%201.682-8.41%204.8v5.94l11.355-6.538zM17.032%2020.975v20.022l11.355%206.537v-5.938l-5.932-3.357-.002-.002-.003-.001c-.02-.012-.036-.028-.055-.043-.016-.012-.035-.023-.049-.037l-.001-.002c-.017-.016-.029-.036-.043-.054-.013-.017-.028-.032-.038-.05l-.001-.002c-.012-.02-.019-.043-.027-.065-.009-.019-.02-.037-.025-.058-.006-.025-.007-.05-.01-.076-.003-.02-.008-.038-.008-.058V23.946L19.2%2022.222l-2.168-1.247zm5.678-3.863-5.16%202.97%205.159%202.97%205.16-2.97-5.16-2.97h.001zm2.684%2018.537%202.993-1.723V20.975l-2.167%201.247-2.994%201.724v12.951l2.168-1.248zM41.29%2020.617l-5.16%202.97%205.16%202.97%205.158-2.97-5.158-2.97zm-.517%206.835-2.994-1.724-2.167-1.248v5.88l2.993%201.723%202.168%201.249v-5.88zm-11.872%2013.25%207.568-4.32%203.783-2.16-5.156-2.968-5.936%203.418-5.41%203.115%205.151%202.915z'%20fill='%23FF2D20'/%3e%3c/svg%3e" alt="Laravel" class="skill-logo">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fade Effect Left -->
+    <div class="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-gray-900 to-transparent z-10"></div>
+
+</div>
+
+<!-- Infinite Looping skills icon 2 -->
+ <div class="dark:bg-dark text-zinc-950 flex justify-center items-center mt-10">
+  <!-- Fade Effect Left -->
+    <div class="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-gray-900 to-transparent z-10"></div>
+
+    <div class="w-full overflow-hidden relative">
+        <div class="scroll-container">
+            <div class="scroll-wrapper">
+                <div class="scroll-content">
+                    <img src="./assets/github-C9jJWfIR.png" alt="Github" class="skill-logo dark:text-white dark:filter dark:invert">
+                    <img src="data:image/png;base64,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" alt="Git" class="skill-logo">
+                    <img src="./assets/gitlab.png" alt="Gitlab" class="skill-logo">
+                    <img src="./assets/mysql-logo-D3bLP8_A.svg" alt="mySQL" class="skill-logo">
+                    <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Generator:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='800px'%20height='800px'%20viewBox='0%200%2032%2032'%20xmlns='http://www.w3.org/2000/svg'%3e%3ctitle%3efile_type_firebase%3c/title%3e%3cpath%20d='M5.8,24.6l.17-.237L13.99,9.149l.017-.161L10.472,2.348a.656.656,0,0,0-1.227.207Z'%20style='fill:%23ffc24a'/%3e%3cpath%20d='M5.9,24.42l.128-.25L13.965,9.114,10.439,2.448a.6.6,0,0,0-1.133.206Z'%20style='fill:%23ffa712'/%3e%3cpath%20d='M16.584,14.01l2.632-2.7L16.583,6.289a.678.678,0,0,0-1.195,0L13.981,8.971V9.2Z'%20style='fill:%23f4bd62'/%3e%3cpath%20d='M16.537,13.9l2.559-2.62L16.537,6.4a.589.589,0,0,0-1.074-.047L14.049,9.082l-.042.139Z'%20style='fill:%23ffa50e'/%3e%3cpolygon%20points='5.802%2024.601%205.879%2024.523%206.158%2024.41%2016.418%2014.188%2016.548%2013.834%2013.989%208.956%205.802%2024.601'%20style='fill:%23f6820c'/%3e%3cpath%20d='M16.912,29.756,26.2,24.577,23.546,8.246A.635.635,0,0,0,22.471,7.9L5.8,24.6l9.233,5.155a1.927,1.927,0,0,0,1.878,0'%20style='fill:%23fde068'/%3e%3cpath%20d='M26.115,24.534,23.483,8.326a.557.557,0,0,0-.967-.353L5.9,24.569l9.131,5.1a1.912,1.912,0,0,0,1.863,0Z'%20style='fill:%23fcca3f'/%3e%3cpath%20d='M16.912,29.6a1.927,1.927,0,0,1-1.878,0L5.876,24.522,5.8,24.6l9.233,5.155a1.927,1.927,0,0,0,1.878,0L26.2,24.577l-.023-.14Z'%20style='fill:%23eeab37'/%3e%3c/svg%3e" alt="Firebase" class="skill-logo">
+                    <img src="./assets/Dart-logo-icon.svg-Bs2tAhmY-Bs2tAhmY.png" alt="Dart" class="skill-logo">
+                    <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Generator:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='800px'%20height='800px'%20viewBox='-30.5%200%20317%20317'%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20preserveAspectRatio='xMidYMid'%3e%3cdefs%3e%3clinearGradient%20x1='3.9517088%25'%20y1='26.9930287%25'%20x2='75.8970734%25'%20y2='52.9192657%25'%20id='linearGradient-1'%3e%3cstop%20stop-color='%23000000'%20offset='0%25'%3e%3c/stop%3e%3cstop%20stop-color='%23000000'%20stop-opacity='0'%20offset='100%25'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3cg%3e%3cpolygon%20fill='%2347C5FB'%20points='157.665785%200.000549356223%200.000549356223%20157.665785%2048.8009614%20206.466197%20255.267708%200.000549356223'%3e%3c/polygon%3e%3cpolygon%20fill='%2347C5FB'%20points='156.567183%20145.396793%2072.1487107%20229.815265%20121.132608%20279.530905%20169.842925%20230.820587%20255.267818%20145.396793'%3e%3c/polygon%3e%3cpolygon%20fill='%2300569E'%20points='121.133047%20279.531124%20158.214592%20316.61267%20255.267159%20316.61267%20169.842266%20230.820807'%3e%3c/polygon%3e%3cpolygon%20fill='%2300B5F8'%20points='71.5995742%20230.364072%20120.401085%20181.562561%20169.842046%20230.821136%20121.132827%20279.531454'%3e%3c/polygon%3e%3cpolygon%20fill-opacity='0.8'%20fill='url(%23linearGradient-1)'%20points='121.132827%20279.531454%20161.692896%20266.072227%20165.721875%20234.941308'%3e%3c/polygon%3e%3c/g%3e%3c/svg%3e" alt="Flutter" class="skill-logo">
+                    <img src="./assets/figma-removebg-CnqD4NkM.png" alt="Figma" class="skill-logo">
+                </div>
+                <div class="scroll-content">
+                    <img src="./assets/github-C9jJWfIR.png" alt="Github" class="skill-logo dark:text-white dark:filter dark:invert">
+                    <img src="data:image/png;base64,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" alt="Git" class="skill-logo">
+                    <img src="./assets/gitlab.png" alt="Gitlab" class="skill-logo">
+                    <img src="./assets/mysql-logo-D3bLP8_A.svg" alt="mySQL" class="skill-logo">
+                    <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Generator:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='800px'%20height='800px'%20viewBox='0%200%2032%2032'%20xmlns='http://www.w3.org/2000/svg'%3e%3ctitle%3efile_type_firebase%3c/title%3e%3cpath%20d='M5.8,24.6l.17-.237L13.99,9.149l.017-.161L10.472,2.348a.656.656,0,0,0-1.227.207Z'%20style='fill:%23ffc24a'/%3e%3cpath%20d='M5.9,24.42l.128-.25L13.965,9.114,10.439,2.448a.6.6,0,0,0-1.133.206Z'%20style='fill:%23ffa712'/%3e%3cpath%20d='M16.584,14.01l2.632-2.7L16.583,6.289a.678.678,0,0,0-1.195,0L13.981,8.971V9.2Z'%20style='fill:%23f4bd62'/%3e%3cpath%20d='M16.537,13.9l2.559-2.62L16.537,6.4a.589.589,0,0,0-1.074-.047L14.049,9.082l-.042.139Z'%20style='fill:%23ffa50e'/%3e%3cpolygon%20points='5.802%2024.601%205.879%2024.523%206.158%2024.41%2016.418%2014.188%2016.548%2013.834%2013.989%208.956%205.802%2024.601'%20style='fill:%23f6820c'/%3e%3cpath%20d='M16.912,29.756,26.2,24.577,23.546,8.246A.635.635,0,0,0,22.471,7.9L5.8,24.6l9.233,5.155a1.927,1.927,0,0,0,1.878,0'%20style='fill:%23fde068'/%3e%3cpath%20d='M26.115,24.534,23.483,8.326a.557.557,0,0,0-.967-.353L5.9,24.569l9.131,5.1a1.912,1.912,0,0,0,1.863,0Z'%20style='fill:%23fcca3f'/%3e%3cpath%20d='M16.912,29.6a1.927,1.927,0,0,1-1.878,0L5.876,24.522,5.8,24.6l9.233,5.155a1.927,1.927,0,0,0,1.878,0L26.2,24.577l-.023-.14Z'%20style='fill:%23eeab37'/%3e%3c/svg%3e" alt="Firebase" class="skill-logo">
+                    <img src="./assets/Dart-logo-icon.svg-Bs2tAhmY-Bs2tAhmY.png" alt="Dart" class="skill-logo">
+                    <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Generator:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='800px'%20height='800px'%20viewBox='-30.5%200%20317%20317'%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20preserveAspectRatio='xMidYMid'%3e%3cdefs%3e%3clinearGradient%20x1='3.9517088%25'%20y1='26.9930287%25'%20x2='75.8970734%25'%20y2='52.9192657%25'%20id='linearGradient-1'%3e%3cstop%20stop-color='%23000000'%20offset='0%25'%3e%3c/stop%3e%3cstop%20stop-color='%23000000'%20stop-opacity='0'%20offset='100%25'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3cg%3e%3cpolygon%20fill='%2347C5FB'%20points='157.665785%200.000549356223%200.000549356223%20157.665785%2048.8009614%20206.466197%20255.267708%200.000549356223'%3e%3c/polygon%3e%3cpolygon%20fill='%2347C5FB'%20points='156.567183%20145.396793%2072.1487107%20229.815265%20121.132608%20279.530905%20169.842925%20230.820587%20255.267818%20145.396793'%3e%3c/polygon%3e%3cpolygon%20fill='%2300569E'%20points='121.133047%20279.531124%20158.214592%20316.61267%20255.267159%20316.61267%20169.842266%20230.820807'%3e%3c/polygon%3e%3cpolygon%20fill='%2300B5F8'%20points='71.5995742%20230.364072%20120.401085%20181.562561%20169.842046%20230.821136%20121.132827%20279.531454'%3e%3c/polygon%3e%3cpolygon%20fill-opacity='0.8'%20fill='url(%23linearGradient-1)'%20points='121.132827%20279.531454%20161.692896%20266.072227%20165.721875%20234.941308'%3e%3c/polygon%3e%3c/g%3e%3c/svg%3e" alt="Flutter" class="skill-logo">
+                    <img src="./assets/figma-removebg-CnqD4NkM.png" alt="Figma" class="skill-logo">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fade Effect Left -->
+    <div class="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-gray-900 to-transparent z-10"></div>
+
+</div>
 </section>
 <!-- Social Media Button End -->
 
@@ -231,40 +348,40 @@
           <p class="font-medium text-md text-secondary md:text-lg">The following are some of the services I provide, and I am an good at</p>
      </div>
     <div
-      class="mt-10 grid divide-x divide-y  divide-gray-700 overflow-hidden  rounded-3xl border text-gray-600 border-gray-700 sm:grid-cols-2 lg:grid-cols-4  lg:divide-y-0 xl:grid-cols-4" data-aos="zoom-in" data-aos-duration="1000">
-      <div class="group relative bg-gray-500 dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl  hover:shadow-primary">
+      class="mt-10 shadow-xl grid divide-x divide-y  divide-gray-700 overflow-hidden  rounded-3xl border text-gray-600 border-gray-700 sm:grid-cols-2 lg:grid-cols-4  lg:divide-y-0 xl:grid-cols-4" data-aos="zoom-in" data-aos-duration="1000">
+      <div class="group relative bg-gray-100 dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl  hover:shadow-primary">
         <div class="relative space-y-8 py-12 p-8">
           <img src="./assets/web-design-svgrepo-com (1).svg" loading="lazy" width="200" height="200"class="w-12 h-12" style="color:transparent">
           <div class="space-y-2">
             <h5 class="text-xl font-semibold bg-gradient-to-b from-primary to-blue-700 bg-clip-text text-transparent">Front End</h5>
-            <p class="text-gray-300">Crafting interactive and responsive user interfaces to deliver seamless user experiences across all devices.</p>
+            <p class="text-gray-500">Crafting interactive and responsive user interfaces to deliver seamless user experiences across all devices.</p>
           </div>
         </div>
       </div>
-      <div class="group relative bg-gray-500 dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-primary">
+      <div class="group relative bg-gray-100 dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-primary">
         <div class="relative space-y-8 py-12 p-8">
           <img src="./assets/coding-svgrepo-com.svg" loading="lazy" width="200" height="200"class="w-12 h-12" style="color:transparent" >
           <div class="space-y-2">
             <h5 class="text-xl font-semibold bg-gradient-to-b from-primary to-blue-700 bg-clip-text text-transparent">Back End</h5>
-            <p class="text-gray-300">Developing secure and efficient server-side systems to support web application functionality.</p>
+            <p class="text-gray-500">Developing secure and efficient server-side systems to support web application functionality.</p>
           </div>
         </div>
       </div>
-      <div class="group relative bg-gray-500 dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-primary">
+      <div class="group relative bg-gray-100 dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-primary">
         <div class="relative space-y-8 py-12 p-8">
           <img src="./assets/web-design-svgrepo-com (2).svg" loading="lazy" width="200" height="200"class="w-12 h-12" style="color:transparent" >
           <div class="space-y-2">
             <h5 class="text-xl font-semibold bg-gradient-to-b from-primary to-blue-700 bg-clip-text text-transparent">Web Design</h5>
-            <p class="text-gray-300">Designing aesthetically pleasing and intuitive layouts that align with user needs and brand identity.</p>
+            <p class="text-gray-500">Designing aesthetically pleasing and intuitive layouts that align with user needs and brand identity.</p>
           </div>
         </div>
       </div>
-      <div class="group relative bg-gray-500 dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-primary">
+      <div class="group relative bg-gray-100 dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-primary">
         <div class="relative space-y-8 py-12 p-8">
           <img src="./assets/mobile-development-coding-code-xcode-svgrepo-com.svg" loading="lazy" width="200" height="200"class="w-12 h-12" style="color:transparent">
           <div class="space-y-2">
             <h5 class="text-xl font-semibold bg-gradient-to-b from-primary to-blue-700 bg-clip-text text-transparent">Mobile Development</h5>
-            <p class="text-gray-300">Build simple applications that are compatible with multiple platforms.</p>
+            <p class="text-gray-500">Build simple applications that are compatible with multiple platforms.</p>
           </div>
         </div>
       </div>
@@ -541,6 +658,8 @@
             src="data:image/png;base64,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" alt="Card Image">
             <img class="h-12 w-12 dark:text-white dark:filter dark:invert"
             src="./assets/github-C9jJWfIR.png" alt="Card Image">
+            <img class="h-12 w-12"
+            src="./assets/gitlab.png" alt="Card Image">
           </div>
             <div class="space-y-2 ml-2">
                     <h3 class="font-bold text-slate-900 dark:text-white">Dev <span class="bg-gradient-to-r from-primary to-blue-700 bg-clip-text text-transparent">Ops</span></h3>
@@ -632,7 +751,7 @@
                 <a href="#"
                     class="font-semibold text-lg inline-block hover:text-primary transition duration-500 ease-in-out  dark:text-white">Starting basic 
                     programming to become a software developer</a>
-                <p class="text-gray-500 text-sm pt-2">
+                <p class="text-gray-100 text-sm pt-2">
                   Start knowledge about the world of programming and become a software developer
                 </p>
             </div>
