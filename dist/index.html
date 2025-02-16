@@ -58,7 +58,23 @@
         filter: drop-shadow(4px 4px 4px #34d399);
     }
 
+    /* Responsive adjusments */
+    @media (max-width: 768px) {
+        .scroll-container {
+          gap: 0.5rem;
+          padding: 0.5rem;
+        }
 
+        .skill-logo {
+          height: 3rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .skill-logo {
+          height: 2.5rem;
+        }
+    }
 </style>
 </head>
 
@@ -299,7 +315,7 @@
     <!-- Fade Effect Left -->
     <div class="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-gray-900 to-transparent z-10"></div>
 
-</div>
+ </div>
 
 <!-- Infinite Looping skills icon 2 -->
  <div class="dark:bg-dark text-zinc-950 flex justify-center items-center mt-10">
